@@ -1,3 +1,9 @@
+/*
+ * Coursera/Algorithms on Graphs/Week 1/Task 1 - reachability
+ * By Shostatskyi. Copyright 2017
+ * Note Coursera Honor Code
+ */
+
 #include <iostream>
 #include <vector>
 
@@ -12,7 +18,7 @@ void exploreVertices(vector<Vertix> &adj, int v, int target)
 {
   adj[v].visited = true;
   for (int &w: adj[v].adjEdges)
-  { 
+  {
     if (!adj[w].visited)
         exploreVertices(adj, w, target);
   }
